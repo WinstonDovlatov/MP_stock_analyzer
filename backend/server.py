@@ -1,6 +1,6 @@
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from matrix_profile.analyzer import get_last_day_score
 from utils import dt_to_str
+from matrix_profile.analyzer import get_last_day_score
 import json
 import datetime
 import time
