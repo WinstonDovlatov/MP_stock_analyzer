@@ -14,11 +14,13 @@ class MPServer(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.send_header('Content-type', 'application/json')
+        self.send_header('Content-type', 'text/html')
+        self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
 
         response_data = {
             "day": dt_to_str(self.day),
-            "score": round(self.score, 2)
+            "score": round(self.score * 1000)
         }
 
         self.wfile.write(json.dumps(response_data).encode('utf-8'))

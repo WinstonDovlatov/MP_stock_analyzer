@@ -6,7 +6,7 @@ import numpy as np
 
 window_size = 7
 n_features_to_analyze = 90
-start_data = '2023-09-01'
+start_data = '2021-01-01'
 
 
 def get_last_day_score():
